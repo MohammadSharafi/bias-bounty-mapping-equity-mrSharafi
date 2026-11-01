@@ -3,7 +3,7 @@
 # Predicting map coverage gaps without the answer key
 
 <div class="meta">Zindi user <strong>mrSharafi</strong> · final submissions <code>RzkTLsFj</code> (<code>c3_clean_regions_grp05</code>, public RMSE 0.068339)
-and <code>2gyMPZPa</code> (<code>k84_k55_line145_rown512k3</code>, public RMSE 0.056774) · 1 November 2026</div>
+and <code>2gyMPZPa</code> (<code>k84_k55_line145_rown512k3</code>, public RMSE 0.056774) · 1 November 2026 · code: https://github.com/MohammadSharafi/bias-bounty-mapping-equity-mrSharafi</div>
 
 <p class="lead">On 25 September the organisers took away the data their score is computed from. This is how we kept
 predicting it anyway: keep their formula, estimate what was removed from what is still allowed, and learn the rest from

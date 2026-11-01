@@ -2,7 +2,7 @@
 
 # A third of fire stations are missing from Overture, most of all in wildfire country and Oklahoma's tribal areas
 
-<div class="meta">Zindi user <strong>mrSharafi</strong> · 1 November 2026 · data and code: see “Method, data and reproducibility”</div>
+<div class="meta">Zindi user <strong>mrSharafi</strong> · 1 November 2026 · code and data: https://github.com/MohammadSharafi/bias-bounty-mapping-equity-mrSharafi</div>
 
 <p class="lead">On the Klamath River in Humboldt County, California, the Yurok Volunteer Fire Department runs Station 1 in
 Weitchpec. Its tract's wildfire hazard index is 2,233; the top-quarter cut-off in this study is 153.3. Overture's map has
