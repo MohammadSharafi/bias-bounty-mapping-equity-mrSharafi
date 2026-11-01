@@ -1,0 +1,79 @@
+{
+ "within_region": {
+  "eastern-ok|tribal|False": {
+   "n": 152,
+   "rate": 0.263
+  },
+  "eastern-ok|tribal|True": {
+   "n": 987,
+   "rate": 0.465
+  },
+  "maricopa-az|tribal|False": {
+   "n": 487,
+   "rate": 0.224
+  },
+  "maricopa-az|tribal|True": {
+   "n": 33,
+   "rate": 0.424
+  },
+  "northern-ca|tribal|False": {
+   "n": 534,
+   "rate": 0.461
+  },
+  "northern-ca|tribal|True": {
+   "n": 24,
+   "rate": 0.417
+  },
+  "south-central-tx|tribal|False": {
+   "n": 2408,
+   "rate": 0.217
+  },
+  "eastern-ok|top|False": {
+   "n": 873,
+   "rate": 0.387
+  },
+  "eastern-ok|top|True": {
+   "n": 266,
+   "rate": 0.605
+  },
+  "maricopa-az|top|False": {
+   "n": 306,
+   "rate": 0.193
+  },
+  "maricopa-az|top|True": {
+   "n": 214,
+   "rate": 0.299
+  },
+  "northern-ca|top|False": {
+   "n": 124,
+   "rate": 0.169
+  },
+  "northern-ca|top|True": {
+   "n": 434,
+   "rate": 0.541
+  },
+  "south-central-tx|top|False": {
+   "n": 2165,
+   "rate": 0.206
+  },
+  "south-central-tx|top|True": {
+   "n": 243,
+   "rate": 0.313
+  }
+ },
+ "hazard_or_by_region_tribal": {
+  "or": 2.29,
+  "lo": 1.94,
+  "hi": 2.71
+ },
+ "tribal_or_by_region_hazard": {
+  "or": 1.91,
+  "lo": 1.4,
+  "hi": 2.61
+ },
+ "tribal_or_eastern_ok": {
+  "or": 2.28,
+  "lo": 1.54,
+  "hi": 3.36
+ }
+}

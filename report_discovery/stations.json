@@ -1,0 +1,352 @@
+{
+ "stations": 4625,
+ "tracts": 3236,
+ "all": {
+  "n": 4625,
+  "missing": 1400,
+  "rate": 0.3027027027027027,
+  "ci_lo": 0.2896300327801751,
+  "ci_hi": 0.3161028572802669
+ },
+ "volunteer": {
+  "n": 1515,
+  "missing": 533,
+  "rate": 0.35181518151815183,
+  "ci_lo": 0.328170735723629,
+  "ci_hi": 0.3762092338531854
+ },
+ "career": {
+  "n": 3110,
+  "missing": 867,
+  "rate": 0.2787781350482315,
+  "ci_lo": 0.26329902021603163,
+  "ci_hi": 0.29480310032857154
+ },
+ "sensitivity": {
+  "250": {
+   "volunteer": 0.3696369636963696,
+   "career": 0.2919614147909968
+  },
+  "500": {
+   "volunteer": 0.35181518151815183,
+   "career": 0.2787781350482315
+  },
+  "1000": {
+   "volunteer": 0.33663366336633666,
+   "career": 0.26334405144694534
+  }
+ },
+ "strata": [
+  {
+   "rural": false,
+   "tribal": false,
+   "volunteer": false,
+   "n": 1724,
+   "missing": 278,
+   "rate": 0.16125290023201855,
+   "ci_lo": 0.1446487362737095,
+   "ci_hi": 0.1793633722436453
+  },
+  {
+   "rural": false,
+   "tribal": false,
+   "volunteer": true,
+   "n": 226,
+   "missing": 37,
+   "rate": 0.16371681415929204,
+   "ci_lo": 0.1211712936501077,
+   "ci_hi": 0.21750368946870108
+  },
+  {
+   "rural": false,
+   "tribal": true,
+   "volunteer": false,
+   "n": 163,
+   "missing": 41,
+   "rate": 0.25153374233128833,
+   "ci_lo": 0.1911669475820414,
+   "ci_hi": 0.3233426231724947
+  },
+  {
+   "rural": false,
+   "tribal": true,
+   "volunteer": true,
+   "n": 10,
+   "missing": 1,
+   "rate": 0.1,
+   "ci_lo": 0.01787574951572113,
+   "ci_hi": 0.4041563854975721
+  },
+  {
+   "rural": true,
+   "tribal": false,
+   "volunteer": false,
+   "n": 711,
+   "missing": 294,
+   "rate": 0.41350210970464135,
+   "ci_lo": 0.377862627440793,
+   "ci_hi": 0.4500712812740887
+  },
+  {
+   "rural": true,
+   "tribal": false,
+   "volunteer": true,
+   "n": 920,
+   "missing": 308,
+   "rate": 0.3347826086956522,
+   "ci_lo": 0.3050305725764881,
+   "ci_hi": 0.36590868800671145
+  },
+  {
+   "rural": true,
+   "tribal": true,
+   "volunteer": false,
+   "n": 512,
+   "missing": 254,
+   "rate": 0.49609375,
+   "ci_lo": 0.4529754300729721,
+   "ci_hi": 0.5392702515471222
+  },
+  {
+   "rural": true,
+   "tribal": true,
+   "volunteer": true,
+   "n": 359,
+   "missing": 187,
+   "rate": 0.520891364902507,
+   "ci_lo": 0.469266742675186,
+   "ci_hi": 0.5720736108013724
+  }
+ ],
+ "regions": [
+  {
+   "region": "eastern-ok",
+   "volunteer": {
+    "n": 384,
+    "missing": 192,
+    "rate": 0.5,
+    "ci_lo": 0.45023787924276143,
+    "ci_hi": 0.5497621207572386
+   },
+   "career": {
+    "n": 755,
+    "missing": 307,
+    "rate": 0.4066225165562914,
+    "ci_lo": 0.37214247596179717,
+    "ci_hi": 0.4420479954093032
+   }
+  },
+  {
+   "region": "maricopa-az",
+   "volunteer": {
+    "n": 28,
+    "missing": 12,
+    "rate": 0.42857142857142855,
+    "ci_lo": 0.2650829618073122,
+    "ci_hi": 0.609295210143846
+   },
+   "career": {
+    "n": 492,
+    "missing": 111,
+    "rate": 0.22560975609756098,
+    "ci_lo": 0.19088310525709345,
+    "ci_hi": 0.26458815814638054
+   }
+  },
+  {
+   "region": "northern-ca",
+   "volunteer": {
+    "n": 78,
+    "missing": 41,
+    "rate": 0.5256410256410257,
+    "ci_lo": 0.4162457167544665,
+    "ci_hi": 0.632629183051989
+   },
+   "career": {
+    "n": 480,
+    "missing": 215,
+    "rate": 0.4479166666666667,
+    "ci_lo": 0.4040178955025967,
+    "ci_hi": 0.4926424991389554
+   }
+  },
+  {
+   "region": "south-central-tx",
+   "volunteer": {
+    "n": 1025,
+    "missing": 288,
+    "rate": 0.2809756097560976,
+    "ci_lo": 0.2543157267449703,
+    "ci_hi": 0.3092711266637566
+   },
+   "career": {
+    "n": 1383,
+    "missing": 234,
+    "rate": 0.16919739696312364,
+    "ci_lo": 0.1503596813501077,
+    "ci_hi": 0.189867782262175
+   }
+  }
+ ],
+ "meta_only_share_of_visible": 0.9072868217054264,
+ "missing_held_as_building": 78,
+ "hazard": [
+  {
+   "tribal": false,
+   "wildfire_top_quartile": false,
+   "n": 2709,
+   "missing": 545,
+   "rate": 0.2011812476928756,
+   "ci_lo": 0.18651289522418216,
+   "ci_hi": 0.21669590251763957
+  },
+  {
+   "tribal": false,
+   "wildfire_top_quartile": true,
+   "n": 872,
+   "missing": 372,
+   "rate": 0.42660550458715596,
+   "ci_lo": 0.3941704165993121,
+   "ci_hi": 0.4596844356936138
+  },
+  {
+   "tribal": true,
+   "wildfire_top_quartile": false,
+   "n": 759,
+   "missing": 319,
+   "rate": 0.42028985507246375,
+   "ci_lo": 0.38566068979856694,
+   "ci_hi": 0.4557218462351259
+  },
+  {
+   "tribal": true,
+   "wildfire_top_quartile": true,
+   "n": 285,
+   "missing": 164,
+   "rate": 0.5754385964912281,
+   "ci_lo": 0.5174236634006796,
+   "ci_hi": 0.6314468594048998
+  }
+ ],
+ "missing_top_quartile_wildfire": {
+  "stations": 536,
+  "tracts": 289,
+  "residents": 1065798
+ },
+ "missing_volunteer_top_quartile_wildfire": {
+  "stations": 177,
+  "tracts": 109,
+  "residents": 373836,
+  "whp_q75": 153.29674371833153
+ },
+ "named": [
+  {
+   "name": "Anderson Valley Volunteer Fire Department Station 744",
+   "city": "Yorkville",
+   "region": "northern-ca",
+   "GEOID": "06045011800",
+   "nearest_m": NaN,
+   "usfs_WHP_mean": 4263.3101052881675,
+   "pop_total": 2053
+  },
+  {
+   "name": "Yurok Volunteer Fire Department Station 2",
+   "city": "Hoopa",
+   "region": "northern-ca",
+   "GEOID": "06023010102",
+   "nearest_m": NaN,
+   "usfs_WHP_mean": 2232.925836879655,
+   "pop_total": 2914
+  },
+  {
+   "name": "Yurok Volunteer Fire Department Station 1",
+   "city": "Weitchpec",
+   "region": "northern-ca",
+   "GEOID": "06023010102",
+   "nearest_m": NaN,
+   "usfs_WHP_mean": 2232.925836879655,
+   "pop_total": 2914
+  },
+  {
+   "name": "Willow Creek Volunteer Fire Department",
+   "city": "Willow Creek",
+   "region": "northern-ca",
+   "GEOID": "06023010102",
+   "nearest_m": NaN,
+   "usfs_WHP_mean": 2232.925836879655,
+   "pop_total": 2914
+  },
+  {
+   "name": "Big Bend Volunteer Fire Department",
+   "city": "Ralston",
+   "region": "eastern-ok",
+   "GEOID": "40113940003",
+   "nearest_m": NaN,
+   "usfs_WHP_mean": 383.5510033914002,
+   "pop_total": 4406
+  },
+  {
+   "name": "Drum Creek Volunteer Fire Department",
+   "city": "Ponca City",
+   "region": "eastern-ok",
+   "GEOID": "40113940003",
+   "nearest_m": NaN,
+   "usfs_WHP_mean": 383.5510033914002,
+   "pop_total": 4406
+  },
+  {
+   "name": "Honobia Volunteer Fire Department",
+   "city": "Honobia",
+   "region": "eastern-ok",
+   "GEOID": "40127097600",
+   "nearest_m": NaN,
+   "usfs_WHP_mean": 366.9532776185774,
+   "pop_total": 2627
+  },
+  {
+   "name": "Highway 100 West Volunteer Fire Department",
+   "city": "Stilwell",
+   "region": "eastern-ok",
+   "GEOID": "40001376800",
+   "nearest_m": NaN,
+   "usfs_WHP_mean": 360.8827476659009,
+   "pop_total": 3848
+  },
+  {
+   "name": "Battiest Volunteer Fire Department",
+   "city": "Battiest",
+   "region": "eastern-ok",
+   "GEOID": "40089098200",
+   "nearest_m": NaN,
+   "usfs_WHP_mean": 355.60002262425985,
+   "pop_total": 2349
+  },
+  {
+   "name": "Bethel Volunteer Fire Fighters Association",
+   "city": "Bethel",
+   "region": "eastern-ok",
+   "GEOID": "40089098200",
+   "nearest_m": 659.7787131781648,
+   "usfs_WHP_mean": 355.60002262425985,
+   "pop_total": 2349
+  },
+  {
+   "name": "Pickens Volunteer Fire Department",
+   "city": "Pickens",
+   "region": "eastern-ok",
+   "GEOID": "40089098200",
+   "nearest_m": NaN,
+   "usfs_WHP_mean": 355.60002262425985,
+   "pop_total": 2349
+  },
+  {
+   "name": "Finley Community Volunteer Fire Department",
+   "city": "Finley",
+   "region": "eastern-ok",
+   "GEOID": "40127097800",
+   "nearest_m": NaN,
+   "usfs_WHP_mean": 331.519914551009,
+   "pop_total": 2571
+  }
+ ]
+}

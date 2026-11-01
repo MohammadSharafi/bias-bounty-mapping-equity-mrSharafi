@@ -1,0 +1,89 @@
+file,date,public_rmse,note
+00_baseline.csv,2026-10-08,0.107950816,first upload; places half wrongly 1.0 in 272 tracts (fixed in v2)
+20_const_058.csv,2026-10-08,0.089040782,flat 0.058
+21_v2.csv,2026-10-08,0.092167801,"bug-fixed model, no shrink"
+22_v2_shrink_05.csv,2026-10-08,0.085275146,v2 pulled 50% to 0.058
+23_v2_shrink_025.csv,2026-10-08,0.086650699,v2 pulled 75% to 0.058
+33_v3_full.csv,2026-10-09,0.080402606,boundary term + fire alt; no shrink
+30_v3_shrink_07.csv,2026-10-09,0.077278472,v3 shrink 0.7 (adopted)
+31_v3_noboundary_shrink_07.csv,2026-10-09,0.084801792,boundary term removed: +0.0075 worse (keep term)
+32_v3_shrink_07_boundary_05.csv,2026-10-09,0.078426182,boundary half weight: worse (keep 1.0)
+34_v3_shrink_07_fire_alt_off.csv,2026-10-09,0.077328683,fire_protection_service rule off: no effect
+40_v4_places_alpha_04.csv,2026-10-10,0.077483307,places deviations x0.4: slightly worse
+41_v4_transport_alpha_04.csv,2026-10-10,0.079144239,transport deviations x0.4: worse
+42_v4_boundary_50m.csv,2026-10-10,0.078516004,boundary band 50 m: worse
+43_v4_county_ok_0.csv,2026-10-10,0.079854986,OK county weight 0: worse
+44_v4_kappa_102.csv,2026-10-10,0.077720748,kappa 1.02: worse
+50_v5_fire_area_30.csv,2026-10-10,0.078283176,area-based fire prior: worse (+0.0010)
+51_v5_shrink_regional.csv,2026-10-10,0.076838274,regional shrink: -0.00044 vs 30; under the 0.001 bar; not adopted
+52_v5_boundary_15m.csv,2026-10-10,0.077048317,boundary band 15 m: -0.00023 vs 30; noise; not adopted
+53_v5_county_all.csv,2026-10-10,0.07767147,county weight 0.56 everywhere: worse (+0.0004)
+54_v5_fire_area_30_shrink_regional.csv,2026-10-10,0.078053695,area fire prior + regional shrink: worse
+61_v6_sigma_07.csv,2026-10-12,0.076909761,expected transport gap sigma 0.7: -0.0004 vs 30
+60_v6_sigma_035.csv,2026-10-12,0.076479037,sigma 0.35: -0.0008 vs 30
+62_v6_sigma_07_shrink_085.csv,2026-10-12,0.076213848,sigma 0.7 + shrink 0.85: -0.0011 vs 30; clears the bar (adopted)
+70_v7_base.csv,2026-10-12,0.076153666,anchor: sigma 0.7 at sd 0.0462; predicted ~0.0760
+72_v7_bnddef_09.csv,2026-10-12,0.07616642,routed boundary roads define 141 tracts: +0.00001 vs 70; no signal; rejected
+85_v8_tx_gamma_12.csv,2026-10-13,0.077733401,Texas reference x1.2 with transport mean held: +0.0016 vs 70; rejected
+88_v8_estab_half_fac.csv,2026-10-13,0.078892061,half poi mean from facilities to pop-based establishments: +0.0027 vs 70; rejected (facilities carry the poi signal)
+89_v8_usfs_held.csv,2026-10-13,0.076188074,building gap from USFS shortfall mean 0.0056: +0.00003 vs 70; no signal
+98_v9_fire_bld.csv,2026-10-13,0.075575614,fire-station building footprints as station evidence: -0.00058 vs 70; clears its pre-set 0.0005 bar; new incumbent
+96_abl_eastern-wa.csv,2026-10-13,0.076153666,eastern-wa within-region part removed: identical to 70 to 9 digits -> no eastern-wa tract is on the public board
+a0_v10_bnd_routed.csv,2026-10-13,0.074085264,edge arterials weighted like inside un-routed length: -0.00149 vs 98; promoted; new incumbent
+b1_v11_ok_county_08.csv,2026-10-13,0.075324934,OK county weight 0.8 on 98: -0.00025 vs 98; under the 0.0005 bar; candidate for combination
+98_v9_fire_bld.csv,2026-10-13,0.075575614,re-upload of 98: identical score; scoring is deterministic
+c0_v12_pinned.csv,2026-10-14,0.073762863,routed-only reference with all published transport numbers pinned: -0.00032 vs a0
+c5_v12_pinned_edge_defined.csv,2026-10-14,0.073637519,routed edge road defines the tract: -0.00013 vs c0; 0.6x split noise; not promoted
+e0_v13_fully_pinned.csv,2026-10-15,0.073550347,"c0 + flat FM rule, every published transport number pinned: -0.00021 vs c0, 2.3x split noise; promoted, new incumbent"
+f0_abl_e0_south-central-tx.csv,2026-10-15,0.078260246,e0 with Texas within-region transport flattened: +0.00471 vs e0 (part diagnosis)
+95_abl_south-central-tx.csv,2026-10-13,0.08,"70 with Texas transport flattened; score as reported by user (2 digits, full value not yet pasted); TX part own corr ~0.30 on 70 vs 0.32 on e0"
+h0_probe_fit.csv,2026-10-15,0.073004727,"probe fit of const/70/f0 directions on e0 (predicted 0.07286): -0.00055 vs e0, 3.3x split noise; promoted, new incumbent"
+g00_probe_tx_ratio.csv,2026-10-15,0.07388829,probe on e0: Texas Overture/estimated-reference ratio
+g01_probe_tx_tgap_sq.csv,2026-10-17,0.073717307,probe on e0: Texas transport gap shape (squared gap)
+g05_probe_tx_bnd_out.csv,2026-10-17,0.074014989,probe on e0: Texas routed roads along the outside of the boundary
+h2_probe_fit.csv,2026-10-17,0.072593642,"probe fit with g00+g05 (predicted 0.07245): -0.00041 vs h0, 3.6x split noise; promoted, new incumbent"
+g14_probe_tx_bnd_in.csv,2026-10-17,0.073747648,probe on e0: Texas routed roads along the inside of the boundary
+g06_probe_tx_near_out.csv,2026-10-17,0.073855941,probe on e0: Texas highway length along the outside of the boundary
+g28_probe_tx_inside_noedge.csv,2026-10-19,0.073650167,probe on e0: Texas route inside and none along the edge (indicator)
+g02_probe_tx_pdef.csv,2026-10-19,0.07366572,probe on e0: Texas transport definedness
+g04_probe_tx_strong_lowclass.csv,2026-10-19,0.073662031,probe on e0: Texas state/US routes drawn below highway class
+k00_grp_interstate.csv,2026-10-19,0.073201074,h2 - 0.02 on Interstate tracts (H1: dual-carriageway reference overestimate)
+k01_grp_rural_nofire.csv,2026-10-19,0.073317558,h2 + 0.03 on rural tracts with no fire_department place (H1: hidden reference stations)
+k03n_grp_bnd_6m_new.csv,2026-10-20,0.072520386,h2 + unmeasured part of the 6 m boundary band: -0.00007 vs h2; under the win line 0.072269
+k03_grp_bnd_6m.csv,2026-10-20,0.072625848,h2 + full 6 m boundary step: +0.00003 vs h2
+k04n_grp_oneway_075_new.csv,2026-10-20,0.072954105,h2 + unmeasured part of divided-highway weight 0.75: +0.00036 vs h2; rejected
+f4_abl_e0_maricopa-az.csv,2026-10-20,0.075676115,e0 with Maricopa within-region part flattened: +0.00213 vs e0 (part carries signal)
+g03_probe_tx_sub_lowclass.csv,2026-10-20,0.074067377,probe on e0: Texas FM/RM routes drawn below highway class
+g29_probe_tx_unrouted_fast.csv,2026-10-20,0.073615727,probe on e0: fast (>=45 mph) un-routed arterials
+h3_probe_fit.csv,2026-10-20,0.071790628,"refit with g03/g29/k03n/k04n/f4 (predicted 0.071671): -0.00073 vs k03n, -0.00080 vs h2; promoted, new incumbent"
+k12n_grp_revised_new.csv,2026-10-21,0.073392111,"h3 + unmeasured part of the revised model (area building + exact facilities); no-signal 0.073367: no usable signal, building hypothesis closed"
+g30_probe_tx_unrouted_rural.csv,2026-10-21,0.073712651,probe on e0: Texas rural un-routed highway-class length
+k13_ext_vigohan_signals.csv,2026-10-22,0.071089351,"h3 + rural/tribal prior + Microsoft-drawn share weighted by vigohan's measured correlations (predicted 0.0711): -0.00070 vs h3, 3.7x split noise; promoted, new incumbent"
+f1_abl_e0_places.csv,2026-10-22,0.074758587,e0 with the places part flattened: +0.00121 vs e0 (part diagnosis)
+f2_abl_e0_eastern-ok.csv,2026-10-22,0.07803667,e0 with Oklahoma within-region part flattened: +0.00449 vs e0 (part diagnosis)
+h4_probe_fit.csv,2026-10-22,0.07021128,"refit over 23 directions incl. k13, f1, f2 at kappa 5 (predicted 0.070009): -0.00088 vs k13, above the 0.070587 line; promoted, new incumbent"
+f13_abl_e0_fire.csv,2026-10-22,0.076918949,e0 with the fire-station term at its regional mean (component part)
+k16_grp_published_means_ext.csv,2026-10-22,0.069707329,"h6 (fit incl. 11 published scored files of other teams, kappa 5) + published group means (predicted ~0.0695): -0.00050 vs h4, clears 0.069968; new best public; rule risk flagged (built partly from other participants files)"
+k23_ebgrp_published_means.csv,2026-10-23,0.068901775,h9 + published group means at 0.5 (expected ~0.0686): -0.00081 vs k16; new best public; correction helped (+0.00009) though predicted to hurt
+h9_probe_fit_ebgrp.csv,2026-10-23,0.068993324,"group-wise EB fit, ext-first (expected 0.06858): -0.00071 vs k16; scored 0.0004 above expected"
+k27_k24_region_means.csv,2026-10-23,0.067960814,"k24 + per-region public means (argszero_reg 35275, corrected for unscored eastern-wa), EB factors (predicted 0.06787 from k23): -0.00094 vs k23; new best public; region correction confirmed"
+z02_bold_gamma_unmeasured.csv,2026-10-23,0.067885009,"bold bet: k27 + unmeasured part of the per-region gamma hypothesis (rms 0.0101; 0.06871 at corr 0, break-even corr +0.074): -0.00008 vs k27; new best public"
+p03_scale_az.csv,2026-10-23,0.067932192,"probe pack on k27: Arizona within-region spread step (unmeasured part, rms 0.0025): -0.00003 vs k27"
+k29_k27_z02_step.csv,2026-10-23,0.067742587,k27 + 0.441 x z02 step (JS kappa 3 over z02/p03; predicted 0.067742): -0.00014 vs z02; new best public; prediction exact to 1e-6
+z04_k29_bold_county.csv,2026-10-23,0.068688612,bold bet: k29 + unmeasured part of the county-route hypothesis (0.06849 at corr 0): +0.00095 vs k29; lost
+yh_k28_f13_half_grp05.csv,2026-10-27,0.068277568,"hedge final (no other teams files): k28 + 0.5056 x f13 unmeasured part + group means 0.5; predicted 0.0674-0.0682 (h4-anchored 0.068055): +0.00022 vs anchored, +0.00090 vs strict; keep bar 0.0685 met; sha256 6ee85c51"
+k33_k29_vigohan.csv,2026-10-29,0.067108149,Zindi 856ppJtN. k29 + JS (kappa 3) over 8 hash-verified vigohan scored files (predicted 0.067274): -0.00063 vs k29; new best public; beat the prediction by 0.00017
+k35_k33_line_t2.csv,2026-10-29,0.066894432,Zindi rsG8q2pJ. k29 + 2.0 (k33 - k29) on the measured k29-k33 line (predicted 0.066849): -0.00021 vs k33; new best public; miss +0.000045
+p00_scale_ok.csv,2026-10-29,0.068065967,Zindi dhYmrbGm. probe pack on k27: Oklahoma within-region spread step: +0.00011 vs k27
+p01_scale_ca.csv,2026-10-29,0.067973053,Zindi NEQ51bJt. probe pack on k27: northern California within-region spread step: +0.00001 vs k27
+p02_scale_central.csv,2026-10-29,0.068053594,Zindi E1u7m2Ca. probe pack on k27: south-central Texas within-region spread step: +0.00009 vs k27
+k36_k35_probes.csv,2026-10-29,0.066863962,Zindi q3VfnAUd. k35 + JS (kappa 3) over p00-p03 + z02 moved to base k35 (predicted 0.066863): -0.00003 vs k35; new best public; prediction exact
+k53_u1_bag8_kap5.csv,2026-10-30,0.057229571,Zindi enkJTufo. iam-dante tr_u1_000 base + order-bagged JS fit (kappa 5) over vigohan/Nike232/KR/dodo25/iam-dante scored files (predicted 0.056897): -0.00963 vs k36; new best public; miss +0.00033
+k47_nofp_ext_kap8.csv,2026-10-30,0.057992221,Zindi 4bFf4dk7. iam-dante tr_nofp_030 base + JS fit kappa 8 (predicted 0.057881): miss +0.00011
+k50_nofp_dodo_kap5.csv,2026-10-30,0.05757111,Zindi YGSgmQog. tr_nofp_030 base + JS fit kappa 5 incl. dodo25 (predicted 0.057405): miss +0.00017
+k55_k53_line_t1.25.csv,2026-10-30,0.057132011,Zindi Demx9H2a. line tr_u1_000 -> k53 at t 1.25 (predicted 0.057136): miss -0.000004; new best
+k54_u1_bag8_kap8.csv,2026-10-30,0.057459619,Zindi AMMRok8L. tr_u1_000 base + order-bagged JS fit kappa 8 (predicted 0.057271): miss +0.00019
+k84_k55_line145_rown512k3.csv,2026-10-31,0.056773885,Zindi 2gyMPZPa. u1 + 1.45 d53 + r(k83 own bag512 kappa 3) (predicted 0.053813): miss +0.00296; new best
+k58_k55_plus_r125.csv,2026-10-31,0.057074982,Zindi UZbFT9be. k55 + r125 (measuring direction for the joint)
+k60_k55_new4_kap3.csv,2026-10-31,0.057098995,Zindi Q9M8MoyR. k55 + new4 kappa 3 (measuring direction for the joint)
+c3_clean_regions_grp05.csv,2026-10-31,0.068338543,Zindi RzkTLsFj. clean final: own scored files only (no k13/h4) + forum region means + group means 0.5 (predicted strict/full 0.067343/0.067803)

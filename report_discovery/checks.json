@@ -1,0 +1,71 @@
+{
+ "control": {
+  "schools": {
+   "n": 12585,
+   "missing_500m": 0.018
+  },
+  "hospitals": {
+   "n": 768,
+   "missing_500m": 0.01
+  },
+  "fire_stations": {
+   "n": 4625,
+   "missing_500m": 0.303
+  }
+ },
+ "distance_missing": {
+  "n": 1400,
+  "median_km": 6.3,
+  "share_over_5km": 0.588,
+  "urban_nontribal": {
+   "n": 315,
+   "median_km": 2.6
+  },
+  "urban_tribal": {
+   "n": 42,
+   "median_km": 2.7
+  },
+  "rural_nontribal": {
+   "n": 602,
+   "median_km": 7.8
+  },
+  "rural_tribal": {
+   "n": 441,
+   "median_km": 8.9
+  }
+ },
+ "whp_q75": 153.3,
+ "tribal_top_by_region": {
+  "eastern-ok": 245,
+  "northern-ca": 22,
+  "maricopa-az": 18
+ },
+ "rural_cells": {
+  "nontribal|lower": {
+   "n": 947,
+   "rate": 0.313
+  },
+  "nontribal|top": {
+   "n": 684,
+   "rate": 0.447
+  },
+  "tribal|lower": {
+   "n": 602,
+   "rate": 0.468
+  },
+  "tribal|top": {
+   "n": 269,
+   "rate": 0.591
+  }
+ },
+ "hazard_or_by_region_rural_tribal": {
+  "or": 1.62,
+  "lo": 1.36,
+  "hi": 1.93
+ },
+ "tribal_or_by_region_rural_hazard": {
+  "or": 1.45,
+  "lo": 1.04,
+  "hi": 2.02
+ }
+}
